@@ -1,9 +1,12 @@
-<div class="card" style="width: 18rem;">
-  <ng-container *ngFor="let playlist of playlists$ | async">
-    <h5 class="card-title">{{ playlist.title }}</h5>
-    <img [src]="playlist.cover" (click)="goPlaylist()" class="card-img-top" alt="...">
-    <div class="card-body">
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="container">
+  <div class="row row-cols-3">
+    <div class="card" style="width: 35rem;">
+      <ng-container *ngFor="let playlist of playlists$ | async">
+        <h5 class="card-title">{{ playlist.title }}</h5>
+        <div class="card-body">
+          <img [src]="playlist.cover" (click)="goPlaylist(playlist.id)" class="card-img-top">
+        </div>
+      </ng-container>
     </div>
-  </ng-container>
+  </div>
 </div>

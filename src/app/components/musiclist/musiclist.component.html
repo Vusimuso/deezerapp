@@ -1,6 +1,10 @@
 <div>
-  <p>
-    musiclist works!
-  </p>
+  <div *ngIf="playlist" fxLayout fxLayoutAlign="space-between">
+    <div fxLayout="column" FxLayoutGap=".6em">
+      <span>Title : {{playlist.title}}</span>
+      <span>Duration : {{ playlist.duration }}</span>
+      <span>Author : {{ playlist.author?.name}}</span>
+    </div>
+    <img [src]="playlist.cover">
+  </div>
 </div>
-<ng-template #loading></ng-template>

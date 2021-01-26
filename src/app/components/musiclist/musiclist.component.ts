@@ -19,10 +19,10 @@ export class MusiclistComponent implements OnInit {
   public id: string;
   public playlist: Playlist;
   public tracks: Track[];
-  public rows = 10;
-  public page = 0;
-  public itemSize = 100;
-  public scrollHeight = 500;
+  public rows = 30;
+  // public page = 0;
+  // public itemSize = 100;
+  // public scrollHeight = 500;
 
   constructor(
     private route: ActivatedRoute,

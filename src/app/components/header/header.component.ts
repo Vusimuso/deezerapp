@@ -8,14 +8,19 @@ import {ListItemsService} from '../../services/list-items.service';
 })
 export class HeaderComponent implements OnInit {
   title = 'musicdb-app';
-  function: any;
+  filter: any = [];
+  filterValue: string;
 
   constructor(
     private listItemsService: ListItemsService
   ) { }
 
   ngOnInit() {
-    this.listItemsService.searchItems('0');
   }
 
+  searchItem(event: any): void {
+    this.filter = this.listItemsService.searchItems(this.filterValue);
+    console.log(this.filterValue);
+
+  }
 }
